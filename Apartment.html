@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome - Apartment Marketing</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="role-selection-body">
+<div class="container-split">
+<!-- Left Orange Panel -->
+<div class="panel-left"></div>
+
+    <!-- Right White Panel - Content -->
+    <div class="panel-right">
+        <div class="auth-box role-select-box">
+            <h1 class="title">Welcome to Apartment Marketing</h1>
+            
+            <p class="subtitle">Continue as:</p>
+            
+            <div class="button-group">
+                <!-- Owner button redirects to the login/register page with role=owner -->
+                <a href="login_register.html?role=owner" class="button primary-button">OWNER</a>
+                
+                <!-- Client button redirects to the login/register page with role=tenant (using tenant internally) -->
+                <a href="login_register.html?role=tenant" class="button primary-button">TENANT</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
