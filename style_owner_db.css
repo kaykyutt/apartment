@@ -1,0 +1,173 @@
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    body {
+        background: white;
+        min-height: 100vh;
+    }
+   
+    .navbar {
+        background-color: #FF6600;
+        padding: 15px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .navbar .owner-title {
+        font-size: 32px;
+        font-weight: bold;
+        color: white;
+        flex: 0 0 auto; 
+    }
+    .navbar .right-section {
+        display: flex;
+        align-items: center;
+        gap: 15px; 
+        flex: 0 0 auto; 
+    }
+    .navbar input[type="text"] {
+        border-radius: 20px 0 0 20px;
+        border: none;
+        padding: 10px 15px;
+        width: 250px;
+        font-size: 14px;
+        outline: none;
+    }
+    .navbar button.search-btn {
+        border-radius: 0 20px 20px 0;
+        padding: 10px 20px;
+        font-size: 14px;
+        background-color: white;
+        color: #FF6600;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .navbar button.search-btn:hover {
+        background-color: #e65500;
+        color: white;
+    }
+    .navbar button {
+        background-color: white;
+        color: #FF6600;
+        font-weight: bold;
+        font-size: 14px;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .navbar button:hover {
+        background-color: #e65500;
+        color: white;
+    }
+
+
+    .apartment-grid {
+        max-width: 1200px;
+        margin: 30px auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+
+    .apartment-card {
+        background-color: #FF6600;
+        border-radius: 30px;
+        height: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 15px 0 25px;
+        position: relative;
+        box-shadow: 0 4px 8px rgba(255, 102, 0, 0.3);
+    }
+    .apartment-card button {
+        align-self: center;
+        background-color: white;
+        border: none;
+        border-radius: 15px;
+        padding: 10px 25px;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .apartment-card button:hover {
+        background-color: #e65500;
+        color: white;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+
+    @media (max-width: 900px) {
+        .apartment-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .navbar {
+            padding: 15px 20px;
+        }
+        .navbar input[type="text"] {
+            width: 180px;
+        }
+    }
+    @media (max-width: 600px) {
+        .apartment-grid {
+            grid-template-columns: 1fr;
+            max-width: 90%;
+            margin: 20px auto;
+        }
+        .navbar {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 12px;
+        }
+        .navbar .right-section {
+            justify-content: center;
+            flex: none;
+        }
+        .navbar input[type="text"] {
+            width: 100%;
+        }
+    }
+
+    .apartment-image {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+ 
+    .apartment-image.placeholder {
+        background-color: #cc6600;
+    }
+
+
+    .see-details-btn {
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        border: none;
+        border-radius: 15px;
+        padding: 8px 18px;
+        cursor: pointer;
+        font-size: 12px;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        transition: background-color 0.3s ease;
+    }
+
+    .see-details-btn:hover {
+        background-color: #e65500;
+        color: white;
+    }

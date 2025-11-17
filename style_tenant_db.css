@@ -1,0 +1,137 @@
+ body {
+    margin: 0; font-family: Arial, sans-serif;
+    background: white;
+  }
+
+  .navbar {
+    background-color: #FF6600;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .nav-back {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .nav-back:hover {
+    opacity: 0.8;
+  }
+  .nav-search {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .nav-search input[type="text"] {
+    border-radius: 20px 0 0 20px;
+    border: none;
+    padding: 8px 15px;
+    width: 220px;
+    font-size: 14px;
+    outline: none;
+  }
+  .nav-search button {
+    border-radius: 0 20px 20px 0;
+    padding: 8px 20px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    font-weight: bold;
+    color: #FF6600;
+    transition: background-color 0.3s ease;
+  }
+  .nav-search button:hover {
+    background-color: #e65500;
+    color: white;
+  }
+  .nav-logout {
+    background-color: white;
+    color: #FF6600;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius:8px;
+    cursor: pointer;
+    border:none;
+    transition: background-color 0.3s ease;
+  }
+  .nav-logout:hover {
+    background-color: #e65500;
+    color: white;
+  }
+
+
+  .apartment-grid {
+    max-width: 1000px;
+    margin: 25px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    padding: 0 15px;
+  }
+  .apartment-card {
+    background-color: #FF6600;
+    border-radius: 20px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(255, 102, 0, 0.5);
+  }
+  .apartment-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .apartment-image.placeholder {
+    background-color: #cc6600;
+  }
+  .apartment-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  .btn-see-details,
+  .btn-pay {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-size: 12px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  }
+  .btn-see-details:hover,
+  .btn-pay:hover {
+    background-color: #e65500;
+    color: white;
+  }
+
+ 
+  @media (max-width: 900px) {
+    .apartment-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    .apartment-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+   .navbar .tenant-title {
+        font-size: 32px;
+        font-weight: bold;
+        color: white;
+        flex: 1 0 auto;
+    }

@@ -1,0 +1,105 @@
+  html, body {
+    margin: 0; padding: 0; height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    display: flex; height: 100vh; width: 100vw;
+  }
+  .left-panel {
+    flex: 1;
+    background-color: #FF6600;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+  .right-panel {
+    flex: 1;
+    background: white;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    text-align: center;
+  }
+  h1 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: black;
+  }
+  form {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select {
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    background-color: #b8b8b8;
+    font-size: 16px;
+    color: white;
+    outline: none;
+    text-align: center;
+  }
+  input::placeholder {
+    color: #dddddd;
+  }
+  button {
+    background-color: #FF6600;
+    border: none;
+    border-radius: 30px;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    color: black;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #e65500;
+    color: white;
+  }
+  .register-link {
+    margin-top: 25px;
+    color: #FF6600;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .register-link:hover {
+    text-decoration: underline;
+  }
+  .message {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .error {
+    color: red;
+  }
+  .success {
+    color: green;
+  }
+  @media(max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    .left-panel, .right-panel {
+      flex: none;
+      height: 50vh;
+      border-radius: 0;
+    }
+    .left-panel {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .right-panel {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
